@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aurora Movies
+
+This is a simple modern movie browsing application built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Server-side pagination
+- Movie cards with ratings and descriptions
+- Fully tested components
+
+## Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Testing**: Jest & React Testing Library
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
-```bash
-npm run dev
-# or
+```
+yarn
+```
+
+Then, run the development server:
+
+```
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/ - Pages
+├── components/ - Components
+├── utils/ # Reusable functions, constants and types
+└── api/ # Api related utils
+```
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
+To run the tests:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+yarn test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Motivation for Using Server-Side Rendering
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The main motivation for using server-side rendering in this project is to improve the performance of the application. By rendering the movies on the server, we can reduce the amount of time it takes to load the page and improve the user experience as well as SEO.
